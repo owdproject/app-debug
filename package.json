@@ -1,10 +1,10 @@
 {
   "name": "owd-app-debug",
-  "version": "0.0.1",
+  "version": "2.0.0-beta.5",
   "license": "MIT",
-  "homepage": "https://github.com/hacklover/owd-app-debug",
+  "homepage": "https://github.com/owdproject/owd-app-debug",
   "author": {
-    "name": "hacklover",
-    "url": "https://github.com/hacklover"
+    "name": "dxlliv",
+    "url": "https://github.com/dxlliv"
   }
 }
