@@ -1,6 +1,7 @@
 export default defineDesktopApp({
   id: "org.owdproject.debug",
   name: "Debug",
+  icon: "mdi:bug",
   windows: {
     main: {
       component: () => import('./app/components/Window/WindowDebug.vue'),
