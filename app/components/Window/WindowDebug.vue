@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import {UseTimeAgo} from "@vueuse/components";
-
 defineProps<{
   window: WindowController
 }>()
@@ -8,74 +6,52 @@ defineProps<{
 
 <template>
   <Window v-bind="$props">
-    <div class="container">
-      <ul>
-        <li>
-          <b>ID</b><br/>
-          {{ window.state.id }}
-        </li>
-        <li>
-          <b>Title</b><br/>
-          <input type="text" v-model="window.state.title"/>
-        </li>
-        <li>
-          <b>Created at</b><br/>
-          <UseTimeAgo  v-slot="{ timeAgo }" :time="window.state.createdAt">
-            <input type="text" :value="timeAgo.toString()" />
-          </UseTimeAgo>
-        </li>
-        <li>
-          <b>Position</b><br/>
-          {{ window.state.position }}
-        </li>
-        <li>
-          <b>Size</b><br/>
-          {{ window.state.size }}
-        </li>
-        <li>
 
-          <label><input type="checkbox" v-model="window.state.resizable"/> Resizable</label>
-        </li>
-        <li>
-          <label><input type="checkbox" v-model="window.state.draggable"/> Draggable</label>
-        </li>
-        <li>
-          <label><input type="checkbox" v-model="window.state.destroyable"/> Destroyable</label>
-        </li>
-        <li>
-          <label><input type="checkbox" v-model="window.state.active" readonly/> Active</label>
-        </li>
-        <li>
-          <label><input type="checkbox" v-model="window.state.focused" readonly/>Focused</label>
-        </li>
-        <li>
-          <label><input type="checkbox" v-model="window.state.overflow"/>Overflow</label>
-        </li>
-      </ul>
-    </div>
+    <Tabs value="0">
+      <TabList>
+        <Tab value="0">Components</Tab>
+        <Tab value="1">State</Tab>
+      </TabList>
+      <TabPanels>
 
+        <TabPanel value="0">
+          <WindowDebugComponentsButton />
+        </TabPanel>
+
+        <TabPanel value="1">
+          <WindowDebugState :window="window" />
+        </TabPanel>
+
+      </TabPanels>
+    </Tabs>
   </Window>
 </template>
 
 <style scoped lang="scss">
-.container {
-  padding: 8px;
+.p-tabs {
   max-height: 100%;
   overflow-y: auto;
-}
+  padding: 12px;
 
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  :deep(.p-tabpanel) {
+    padding: 8px;
+    overflow-y: auto;
 
-  li {
-    line-height: 20px;
-    margin-bottom: 16px;
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        line-height: 20px;
+        margin-bottom: 16px;
+      }
+    }
+
+    textarea {
+      margin-top: 12px;
+      width: 100%;
+    }
   }
-}
-
-input[type="checkbox"] {
-  margin-right: 12px;
 }
 </style>
