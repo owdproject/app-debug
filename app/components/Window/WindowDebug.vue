@@ -5,21 +5,26 @@ defineProps<{
 </script>
 
 <template>
-  <Window v-bind="$props">
+  <Window v-bind="$props" :content="{padded: true}">
 
     <Tabs value="0">
       <TabList>
-        <Tab value="0">Components</Tab>
-        <Tab value="1">State</Tab>
+        <Tab value="0">State</Tab>
+        <Tab value="1">Buttons</Tab>
+        <Tab value="2">Cards</Tab>
       </TabList>
       <TabPanels>
 
         <TabPanel value="0">
-          <WindowDebugComponentsButton />
+          <WindowDebugState :window="window" />
         </TabPanel>
 
         <TabPanel value="1">
-          <WindowDebugState :window="window" />
+          <WindowDebugComponentsButton />
+        </TabPanel>
+
+        <TabPanel value="2">
+          <WindowDebugComponentsCard />
         </TabPanel>
 
       </TabPanels>
@@ -29,14 +34,7 @@ defineProps<{
 
 <style scoped lang="scss">
 .p-tabs {
-  max-height: 100%;
-  overflow-y: auto;
-  padding: 12px;
-
   :deep(.p-tabpanel) {
-    padding: 8px;
-    overflow-y: auto;
-
     ul {
       margin: 0;
       padding: 0;

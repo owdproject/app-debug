@@ -14,6 +14,12 @@
       </div>
     </li>
     <li>
+      <Button rounded>Rounded</Button>
+      <div>
+        <Textarea model-value='<Button rounded>Button</Button>'/>
+      </div>
+    </li>
+    <li>
       <Button label="primary">Primary</Button>
       <div>
         <Textarea model-value='<Button label="primary">Primary</Button>'/>
@@ -37,6 +43,32 @@
       <Button size="large">Size large</Button>
       <div>
         <Textarea model-value='<Button size="large">Size large</Button>' />
+      </div>
+    </li>
+    <li>
+      <Button size="large" rounded>Size large + rounded</Button>
+      <div>
+        <Textarea model-value='<Button size="large" rounded>Size large</Button>' />
+      </div>
+    </li>
+    <li>
+      <Card class="p-card--border px-2 py-6">
+        <template #content>
+          Card
+        </template>
+      </Card>
+      <div>
+        <Textarea model-value='<Card class="p-card--border"><template #content>Card</template></Button>' />
+      </div>
+    </li>
+    <li>
+      <Card class="p-card--inset p-1">
+        <template #content>
+          Card inset
+        </template>
+      </Card>
+      <div>
+        <Textarea model-value='<Card class="inset p-1"><template #content>Card inset</template></Button>' />
       </div>
     </li>
   </ul>

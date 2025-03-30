@@ -11,6 +11,7 @@ export default defineDesktopApp({
       icon: "mdi:bug",
       pinned: true,
       resizable: true,
+      overflow: true,
       size: {
         width: 400,
         minHeight: 500

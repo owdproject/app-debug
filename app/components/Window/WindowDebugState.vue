@@ -33,12 +33,14 @@ import {UseTimeAgo} from "@vueuse/components";
     <li>
       <label>
         <Checkbox binary v-model="window.state.resizable"/>
-        Resizable</label>
+        Resizable
+      </label>
     </li>
     <li>
       <label>
         <Checkbox binary v-model="window.state.draggable"/>
-        Draggable</label>
+        Draggable
+      </label>
     </li>
     <li>
       <label>
