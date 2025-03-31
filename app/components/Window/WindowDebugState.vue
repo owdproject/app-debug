@@ -14,7 +14,7 @@ import {UseTimeAgo} from "@vueuse/components";
     </li>
     <li>
       <b>Title</b><br/>
-      <InputText v-model="window.state.title"/>
+      <InputText readonly v-model="window.title"/>
     </li>
     <li>
       <b>Created at</b><br/>
