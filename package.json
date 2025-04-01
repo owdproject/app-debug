@@ -1,5 +1,6 @@
 {
   "name": "owd-app-debug",
+  "private": true,
   "version": "3.0.0-alpha.0",
   "license": "MIT",
   "homepage": "https://github.com/owdproject/app-debug",
