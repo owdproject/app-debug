@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="media/screenshot.png" alt="OWD Debug App" width="400" />
+  <img src="assets/screenshot.png" alt="OWD Debug App" />
 </p>
 
 # Debug App
@@ -8,27 +8,39 @@
 
 ## Overview
 
-The OWD Debug App is a module to test out Open Web Desktop and see how windows work within the OWD environment.
+The OWD Debug App is a test module for Open Web Desktop that displays useful info about windows.
 
 ## Quick Installation
 
+
 1.  Navigate to your OWD client folder in your terminal:
+
     ```bash
     cd owd-client
     ```
+
 2.  Install the module using npm or yarn:
+
     ```bash
-    npm install https://github.com/owdproject/owd-app-debug.git
+    npm install github:owdproject/app-debug
     ```
-3.  Register the application in your OWD configuration file (`owd.config.ts`):
+
+3.  Register the application in your OWD configuration file:
+
     ```typescript
     // owd.config.ts
+    import AppDebug from 'owd-app-debug/owd.config'
+    
     export const owdConfig = {
-        theme: 'github:owdproject/owd-theme-gnome',
+        theme: ['github:owdproject/theme-win95', { install: true }],
     
         apps: [
-            'owd-app-debug'
-        ]
+           './node_modules/owd-app-debug',
+        ],
+    
+        loader: async () => {
+            await defineDesktopApp(AppDebug)
+        }
     }
     ```
 
