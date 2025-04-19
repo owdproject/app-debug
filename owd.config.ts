@@ -5,7 +5,7 @@ export default {
     icon: "mdi:bug",
     windows: {
         main: {
-            component: () => import('./app/components/Window/WindowDebug.vue'),
+            component: () => import('./runtime/components/Window/WindowDebug.vue'),
             resizable: true,
             size: {
                 width: 400,

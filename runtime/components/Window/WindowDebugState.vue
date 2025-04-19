@@ -64,7 +64,3 @@ import {UseTimeAgo} from "@vueuse/components";
     </li>
   </ul>
 </template>
-
-<style scoped lang="scss">
-
-</style>

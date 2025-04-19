@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import WindowDebugState from "./WindowDebugState.vue";
+import WindowDebugConfig from "./WindowDebugConfig.vue";
+
 defineProps<{
   window: WindowController
 }>()
@@ -10,21 +13,16 @@ defineProps<{
     <Tabs value="0">
       <TabList>
         <Tab value="0">State</Tab>
-        <Tab value="1">Buttons</Tab>
-        <Tab value="2">Cards</Tab>
+        <Tab value="1">Config</Tab>
       </TabList>
       <TabPanels>
 
         <TabPanel value="0">
-          <WindowDebugState :window="window" />
+          <WindowDebugState :window="window"/>
         </TabPanel>
 
         <TabPanel value="1">
-          <WindowDebugComponentsButton />
-        </TabPanel>
-
-        <TabPanel value="2">
-          <WindowDebugComponentsCard />
+          <WindowDebugConfig :window="window"/>
         </TabPanel>
 
       </TabPanels>
