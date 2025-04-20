@@ -3,7 +3,7 @@
 </p>
 <h1 align="center">Debug</h1>
 <h3 align="center">
-  Debug App for your Open Web Desktop client
+  Debug App for your Open Web Desktop client.
 </h3>
 
 ## Overview
