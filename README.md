@@ -37,4 +37,4 @@ This app for Open Web Desktop is a test module that displays information about w
 
 ## License
 
-The application is released under the [GNU General Public License v3](LICENSE).
+The application is released under the [MIT License](LICENSE).
