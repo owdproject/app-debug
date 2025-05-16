@@ -13,7 +13,7 @@ This app for Open Web Desktop is a test module with window states information.
 ## Installation
 
 ```bash
-nx run desktop:install-app --name=@owdproject/app-debug
+owd install-app @owdproject/app-debug
 ```
 
 ## License
