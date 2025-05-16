@@ -3,37 +3,18 @@
 </p>
 <h1 align="center">Debug</h1>
 <h3 align="center">
-  Debug App for your Open Web Desktop client.
+  Debug App for Open Web Desktop.
 </h3>
 
 ## Overview
 
-This app for Open Web Desktop is a test module that displays information about windows.
+This app for Open Web Desktop is a test module with window states information.
 
 ## Installation
 
-1.  Navigate to your client folder in your terminal:
-
-    ```bash
-    cd owd-client
-    ```
-
-2.  Install the desktop module using npm or yarn:
-
-    ```bash
-    npm install @owdproject/app-debug
-    ```
-
-3.  Register the application in your desktop configuration file:
-
-    ```typescript
-    // owd.config.ts
-    export default defineDesktopConfig({
-        apps: [
-            '@owdproject/app-debug',
-        ]
-    })
-    ```
+```bash
+nx run desktop:install-app --name=@owdproject/app-debug
+```
 
 ## License
 
