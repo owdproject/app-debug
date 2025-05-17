@@ -5,5 +5,5 @@ defineProps<{
 </script>
 
 <template>
-  <pre v-text="window.config"/>
+  <pre v-text="window.config" />
 </template>
