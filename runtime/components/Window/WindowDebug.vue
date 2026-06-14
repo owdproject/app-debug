@@ -8,7 +8,7 @@ defineProps<{
 </script>
 
 <template>
-  <Window v-bind="$props" :content="{ padded: true }">
+  <DesktopWindow v-bind="$props" :content="{ padded: true }">
     <Tabs value="0">
       <TabList>
         <Tab value="0">State</Tab>
@@ -24,7 +24,7 @@ defineProps<{
         </TabPanel>
       </TabPanels>
     </Tabs>
-  </Window>
+  </DesktopWindow>
 </template>
 
 <style scoped lang="scss">
