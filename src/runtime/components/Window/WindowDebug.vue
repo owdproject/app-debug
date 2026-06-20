@@ -31,7 +31,10 @@ defineProps<{
 .p-tabs {
   :deep(.p-tablist) {
     background: transparent !important;
-    margin: 0 0 8px;
+    margin: calc(var(--owd-card-body-padding) * -1 + 1px)
+      calc(var(--owd-card-body-padding) * -1)
+      0
+      calc(var(--owd-card-body-padding) * -1);
     padding: 0;
     border: 0;
   }
@@ -42,7 +45,6 @@ defineProps<{
   }
 
   :deep(.p-tablist-tab-list) {
-    gap: 4px;
     border: 0;
   }
 
@@ -51,17 +53,14 @@ defineProps<{
     border: 0 !important;
     border-radius: 0;
     margin: 0;
-    padding: 4px 10px;
-    min-height: 0;
-    font-size: 12px;
+    padding: 0.5rem 1.25rem;
     font-weight: 600;
-    letter-spacing: 0.02em;
-    color: rgba(200, 212, 228, 0.5);
+    color: rgba(200, 212, 228, 0.55);
     box-shadow: none !important;
 
     &:hover {
       background: transparent !important;
-      color: rgba(232, 238, 246, 0.85);
+      color: rgba(232, 238, 246, 0.9);
     }
 
     &.p-tab-active,
@@ -85,10 +84,15 @@ defineProps<{
   :deep(.p-tabpanels),
   :deep(.p-tabpanel) {
     background: transparent;
-    padding: 0;
+  }
+
+  :deep(.p-tabpanels) {
+    padding: var(--owd-tabs-tabpanel-padding, 1.25rem 0 0 0);
   }
 
   :deep(.p-tabpanel) {
+    padding: 0;
+
     ul {
       margin: 0;
       padding: 0;
