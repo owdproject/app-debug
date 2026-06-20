@@ -2,6 +2,7 @@ export default {
   id: 'org.owdproject.debug',
   title: 'Debug',
   category: 'system-tools',
+  singleton: true,
   icon: 'mdi:bug',
   windows: {
     main: {
@@ -9,12 +10,7 @@ export default {
       resizable: true,
       size: {
         width: 400,
-        minHeight: 500,
-      },
-      position: {
-        x: 400,
-        y: 240,
-        z: 0,
+        height: 500,
       },
     },
   },
@@ -29,8 +25,15 @@ export default {
     },
   },
   commands: {
-    debug: (app) => {
-      app.openWindow('main')
+    debug: (app: IApplicationController) => {
+      const existing = app.getFirstWindowByModel('main')
+      if (existing) {
+        existing.actions.setActive(true)
+        existing.actions.bringToFront()
+        return existing
+      }
+
+      return app.openWindow('main')
     },
   },
 }
