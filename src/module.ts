@@ -18,6 +18,7 @@ export default defineNuxtModule({
 
       addComponentsDir({
         path: resolve('./runtime/components'),
+        pathPrefix: false,
       })
     }
 
@@ -32,7 +33,7 @@ export default defineNuxtModule({
 
       registerTailwindPath(
         nuxt,
-        resolve('./runtime/components/**/*.{vue,mjs,ts}'),
+        resolve('./runtime/**/*.{vue,mjs,ts}'),
       )
     }
   },

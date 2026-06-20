@@ -8,9 +8,12 @@ export default {
     main: {
       component: () => import('./components/Window/WindowDebug.vue'),
       resizable: true,
+      maximizable: true,
       size: {
-        width: 400,
-        height: 500,
+        width: 960,
+        height: 720,
+        minWidth: 720,
+        minHeight: 480,
       },
     },
   },
