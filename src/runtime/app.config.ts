@@ -11,9 +11,9 @@ export default {
       maximizable: true,
       size: {
         width: 960,
-        height: 720,
+        height: 640,
         minWidth: 720,
-        minHeight: 480,
+        minHeight: 420,
       },
     },
   },
